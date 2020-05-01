@@ -105,6 +105,12 @@ search:
   field: post
   content: true
 
+# sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+
 feed:
      type: atom
      path: atom.xml
