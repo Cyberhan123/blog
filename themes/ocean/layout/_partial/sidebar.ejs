@@ -1,21 +1,35 @@
 <button class="navbar-toggle"></button>
 <nav class="navbar">
   <% if (theme.brand){ %>
-    <div class="logo">
-      <a href="<%- url_for() %>"><img src="<%- theme.brand %>" alt="<%= config.title %>"></a>
-    </div>
+  <div class="logo">
+    <a href="<%- url_for() %>"><img src="<%- theme.brand %>" alt="<%= config.title %>"></a>
+  </div>
   <% } %>
   <ul class="nav nav-main">
     <% for (var i in theme.menu){ %>
-      <li class="nav-item">
-        <a class="nav-item-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
-      </li>
+    <li class="nav-item">
+      <a class="nav-item-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+    </li>
     <% } %>
     <li class="nav-item">
       <a class="nav-item-link nav-item-search" title="<%= __('search') %>">
         <i class="fe fe-search"></i>
         <%= __('search') %>
       </a>
+    </li>
+    <li class="nav-item">
+      <div class="nav-item-music">
+        <svg t="1588327074239" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          p-id="4779" width="200" height="200">
+          <path d="M405.333333 704m-192 0a192 192 0 1 0 384 0 192 192 0 1 0-384 0Z" fill="#E91E63" p-id="4780"></path>
+          <path d="M512 128v576h85.333333V298.666667l234.666667 64v-149.333334z" fill="#E91E63" p-id="4781"></path>
+        </svg>
+        <div>音乐</div>
+        <div class="nav-item-music-inner">
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52
+            src="//music.163.com/outchain/player?type=2&id=32046267&auto=1&height=32"></iframe>
+        </div>
+      </div>
     </li>
   </ul>
 </nav>
@@ -26,9 +40,9 @@
     </li>
     <li class="nav-item">
       <% if (theme.rss){ %>
-        <a class="nav-item-link" target="_blank" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>">
-          <i class="fe fe-feed"></i>
-        </a>
+      <a class="nav-item-link" target="_blank" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>">
+        <i class="fe fe-feed"></i>
+      </a>
       <% } %>
     </li>
   </ul>
