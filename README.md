@@ -1,8 +1,11 @@
 # Cyberhan 的博客
 
-### netlify 集成自动化
+### netlify 集成自动化（提交即可触发发布）
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0cb187d0-646f-455d-9102-314e25512cd3/deploy-status)](https://app.netlify.com/sites/cyberhan123/deploys)
+
+### 将我的项目部署到你的netlify上
+
 
 点击下方按钮：克隆本项目并部署到Netlify
 
